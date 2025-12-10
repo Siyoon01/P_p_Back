@@ -1,0 +1,136 @@
+.admin-statistics-container {
+  padding: 32px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.admin-statistics-container h2 {
+  font-size: 28px;
+  color: #2d5a2f;
+  margin: 0 0 40px 0;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* 그리드 레이아웃 - 2x2 */
+.statistics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+/* 통계 카드 */
+.stat-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fdf9 100%);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 4px 16px rgba(96, 153, 102, 0.12);
+  transition: all 0.3s ease;
+  border: 1px solid #e8f5e9;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #609966 0%, #4d7d52 100%);
+}
+
+.stat-card:hover {
+  box-shadow: 0 6px 24px rgba(96, 153, 102, 0.18);
+  transform: translateY(-4px);
+}
+
+.stat-card h3 {
+  font-size: 1.2em;
+  color: #2d5a2f;
+  margin: 0 0 28px 0;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.3px;
+}
+
+/* Recharts 커스텀 스타일 */
+.recharts-pie-label-text {
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Noto Sans KR', sans-serif;
+  fill: #2d5a2f;
+}
+
+.recharts-tooltip-wrapper {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.recharts-default-tooltip {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fdf9 100%) !important;
+  border: 2px solid #e8f5e9 !important;
+  border-radius: 12px !important;
+  padding: 12px !important;
+  box-shadow: 0 4px 16px rgba(96, 153, 102, 0.15) !important;
+}
+
+.recharts-tooltip-label {
+  font-weight: 700;
+  color: #2d5a2f;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.recharts-tooltip-item {
+  color: #555555 !important;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* 막대 그래프 라벨 스타일 */
+.recharts-text.recharts-label {
+  font-size: 13px;
+  font-weight: 700;
+  fill: #2d5a2f;
+}
+
+.recharts-cartesian-axis-tick-value {
+  font-size: 12px;
+  font-weight: 500;
+  fill: #555555;
+}
+
+/* 그리드 라인 스타일 */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: #e8f5e9;
+  stroke-opacity: 0.8;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+  .statistics-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-statistics-container {
+    padding: 20px;
+  }
+
+  .admin-statistics-container h2 {
+    font-size: 24px;
+    margin-bottom: 28px;
+  }
+
+  .stat-card {
+    padding: 24px;
+  }
+
+  .stat-card h3 {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+}

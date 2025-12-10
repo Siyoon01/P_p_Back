@@ -1,0 +1,771 @@
+.ingredient-container {
+  width: 75%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #5D4037;
+}
+
+.myfridge-register-methods {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 80px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.myfridge-register-method {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+}
+
+.myfridge-register-method h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+  font-weight: 550;
+  color: #5D4037;
+}
+
+.photo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  flex: 1;
+  justify-content: center;
+}
+
+.photo-upload-area {
+  background-color: #e9ecef;
+  border: 2px dashed #dee2e6;
+  border-radius: 8px;
+  width: 374px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.photo-upload-area:hover {
+  background-color: #d1ecf1;
+}
+
+.upload-placeholder {
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+.uploaded-image-container {
+  width: 374px;
+  height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.uploaded-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.change-photo-btn {
+  padding: 10px 20px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 550;
+  cursor: pointer;
+}
+
+.change-photo-btn:hover {
+  background-color: #5a6268;
+}
+
+.analysis-results {
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.analysis-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #5D4037;
+  margin-bottom: 0;
+  text-align: center;
+  margin-top: 0;
+}
+
+.analysis-subtitle {
+  color: #5D4037;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.analyzed-ingredients-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 25px;
+  justify-content: flex-start;
+}
+
+.analyzed-ingredient-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  width: calc(50% - 10px);
+  min-width: auto;
+  border: 2px solid #609966;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 15px;
+  justify-content: flex-end;
+}
+
+.save-btn, .cancel-btn {
+  width: 100px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  height: 40px;
+  background-color: #609966;
+  color: white;
+  border: none;
+}
+
+.save-btn:hover {
+  background-color: #4E6C50;
+}
+
+.add-analyzed-btn {
+  width: auto;
+  padding: 15px 30px;
+  background-color: #609966;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.add-analyzed-btn:hover {
+  background-color: #4E6C50;
+}
+
+.divider {
+  width: 2px;
+  background-color: #dee2e6;
+  min-height: 420px;
+  margin: 0 20px;
+}
+
+.manual-form {
+  margin-bottom: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.manual-register-section {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 550;
+  color: #5D4037;
+}
+
+.ingredient-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.quantity-input-group {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.quantity-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  height: 42px;
+}
+
+.unit-selector {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+}
+
+.unit-btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: left;
+  height: 42px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.unit-btn:hover {
+  background-color: #f8f9fa;
+}
+
+.unit-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.unit-option {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 1rem;
+}
+
+.unit-option:last-child {
+  border-bottom: none;
+}
+
+.unit-option:hover {
+  background-color: #f8f9fa;
+}
+
+.register-btn {
+  width: auto;
+  padding: 12px 24px;
+  background-color: #609966;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.register-btn:hover {
+  background-color: #4E6C50;
+}
+
+.cancel-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+}
+
+.cancel-btn:hover {
+  background-color: #5a6268;
+}
+
+.cancel-btn:active {
+  background-color: #545b62;
+  transform: translateY(1px);
+}
+
+.cancel-btn:hover {
+  background-color: #5a6268;
+}
+
+.ingredients-wrapper {
+  position: relative;
+}
+
+.ingredients-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #5D4037;
+  position: static;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.ingredients-section {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.expiry-warning-box {
+  background-color: #ffffff;
+  border: 2px dotted #FFC36D;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  width: calc(100% - 40px);
+  margin: 0 auto 25px auto;
+  order: -1;
+}
+
+.expiry-warning-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #5D4037;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.expiry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.expiry-tag {
+  background-color: #FFC36D;
+  color: #333333;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+}
+
+.ingredients-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 0;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap; 
+  gap: 20px;        
+  align-items: stretch;
+}
+
+.empty-message {
+  width: 100%;
+  text-align: center;
+  color: #6c757d;
+  font-size: 1.1rem;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.ingredient-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: calc(46% - 8px);
+  min-width: 220px;
+  border: 1px solid #e9ecef;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  width: calc(50% - 10px);
+  border: 1px solid #eee; 
+  border-radius: 15px; 
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee; 
+  margin-bottom: 0;
+}
+
+.ingredient-card.editing {
+  border: 2px dashed #4CAF50;
+}
+
+.ingredient-info-display {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ingredient-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.ingredient-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #5D4037;
+  flex: 1;
+}
+
+.ingredient-name-display {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.ingredient-buttons {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+  align-self: flex-end;
+  margin-top: auto;
+  padding-bottom: 0;
+}
+
+.fridge-edit-btn, .fridge-delete-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-bottom: 0;
+}
+
+.fridge-edit-btn {
+  background-color: #609966;
+  color: white;
+}
+
+.fridge-edit-btn:hover {
+  background-color: #4E6C50;
+  transform: translateY(-1px);
+}
+
+.fridge-delete-btn {
+  background-color: #609966;
+  color: white;
+}
+
+.fridge-delete-btn:hover {
+  background-color: #4E6C50;
+  transform: translateY(-1px);
+}
+
+.ingredient-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+
+.ingredient-info {
+  color: #6c757d;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+.ingredient-details .info-label {
+  font-weight: normal;
+  color: #6c757d;
+}
+
+.ingredient-details .info-value {
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background-color: #FDF8F5;
+  padding: 30px;
+  border-radius: 15px;
+  width: 560px;
+  max-width: 90vw;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-register-btn {
+  width: auto;
+  padding: 15px 30px;
+  background-color: #609966;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 550;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+}
+
+@media (max-width: 768px) {
+  .register-methods {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+  
+  .register-method {
+    min-height: auto;
+    margin-bottom: 30px;
+  }
+  
+  .manual-register-section {
+    margin-bottom: 30px;
+  }
+  
+  .divider {
+    width: 100%;
+    height: 2px;
+    min-height: auto;
+    margin: 0;
+  }
+  
+  .ingredients-wrapper {
+    margin-top: 40px;
+  }
+
+  .expiry-warning-box {
+    width: calc(100% - 40px);
+  }
+
+  .expiry-tags {
+    justify-content: flex-start;
+  }
+
+  .uploaded-image-container {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+  }
+
+  .photo-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .change-photo-btn, .photo-buttons .register-btn {
+    width: 100%;
+  }
+
+  .analysis-results {
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .analyzed-ingredient-card {
+    width: calc(50% - 10px);
+    min-width: auto;
+  }
+
+  .edit-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .ingredient-card {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .ingredient-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .ingredient-buttons {
+    align-self: flex-end;
+  }
+
+  .quantity-input-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .unit-selector {
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 95%;
+    height: auto;
+    padding: 30px;
+  }
+
+  .modal-register-btn {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ingredient-container {
+    padding: 15px;
+  }
+  
+  .page-title {
+    font-size: 1.2rem;
+  }
+  
+  .register-method {
+    padding: 15px;
+  }
+  
+  .ingredient-card {
+    padding: 15px;
+  }
+  
+  .ingredient-name {
+    font-size: 1.1rem;
+  }
+  
+  .edit-btn, .delete-btn {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  .photo-upload-area {
+    width: 281px;
+    height: 187px;
+  }
+
+  .expiry-warning-box {
+    width: calc(100% - 20px);
+    padding: 15px;
+  }
+
+  .expiry-warning-title {
+    font-size: 1rem;
+  }
+
+  .expiry-tag {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .uploaded-image-container {
+    width: 100%;
+    max-width: 250px;
+    height: 167px;
+  }
+
+  .analysis-results {
+    padding: 15px;
+  }
+
+  .analysis-title {
+    font-size: 1.2rem;
+  }
+
+  .analysis-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .analyzed-ingredient-card {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .add-analyzed-btn {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+}

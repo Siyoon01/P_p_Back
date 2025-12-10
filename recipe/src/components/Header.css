@@ -1,0 +1,83 @@
+.header-container-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #ffffff;
+}
+
+.headerContainer {
+  padding-left: 50px;
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.headerContainer img {
+  width: 260px;
+  height: 130px;
+  border: none;
+}
+
+/* 로그인/회원가입 버튼 영역 */
+.header-auth-buttons {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-right: 50px;
+  white-space: wrap;
+}
+
+/* 로그인/회원가입 Link */
+.header-auth-buttons .auth-button {
+  text-decoration: none;
+}
+
+/* 로그인/회원가입 버튼 */
+.header-auth-buttons button {
+  padding: 8px 15px;
+  background-color: #ffffff;
+  color: #3D3D3D;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+/* 로그인/회원가입 버튼 hover */
+.header-auth-buttons button:hover {
+  background-color: #4E6C50;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .header-container-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 15px;
+  }
+
+
+  .headerContainer {
+    flex: none; 
+    width: 100%;
+    text-align: center;
+    margin-left: 10px;
+  }
+
+  .header-auth-buttons {
+    flex: none;
+    width: 100%;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .header-auth-buttons button {
+    padding: 6px 12px;
+    font-size: 0.9em;
+  }
+}

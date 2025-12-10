@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+}
+
+html, body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main-content-wrapper {
+  display: flex; 
+  flex-direction: row;
+  flex: 1;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+.content {
+  flex: 1;             
+  padding: 20px 10px;
+  background-color: #ffffff; 
+  width: 100%;         
+  box-sizing: border-box;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 30px; 
+  margin: 20px 20px 20px 20px;
+}

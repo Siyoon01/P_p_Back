@@ -1,0 +1,101 @@
+.stagecontainer {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.stageindicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: nowrap;
+}
+
+.stage {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: #FDF8F5;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: 550;
+  font-size: 2rem;
+}
+
+.stage.active {
+  background: #4CAF50;
+  color: #fff;
+}
+
+.arrow {
+  font-size: 3rem;
+  color: #333333;
+  flex-shrink: 0;
+}
+
+/* 단계 라벨 */
+.stage-labels {
+  display: flex;
+  justify-content: center;
+  gap: 7.2rem;
+  margin-top: 8px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #828282;
+  width: 100%;
+}
+
+.stage-labels span {
+  flex: 1;
+  text-align: center;
+  min-width: fit-content;
+}
+
+.stage-labels .active-label {
+  color: #333333;
+  font-weight: 550;
+}
+
+@media (max-width: 768px) {
+  .stagecontainer {
+    max-width: 100%;
+    padding: 0 5px;
+  }
+
+  .stageindicator {
+    gap: 1.3rem;
+    margin: 5px;
+  }
+
+  .stage {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    margin: 10px;
+  }
+
+  .arrow {
+    font-size: 2.5rem;
+    margin: 5px 0;
+  }
+
+  .stage-labels {
+    gap: 0;
+    margin-top: 0;
+    font-size: 1.1rem;
+    padding: 0.5px;
+  }
+
+  .stage-labels span {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}

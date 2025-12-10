@@ -1,0 +1,98 @@
+.admin-header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+/* 왼쪽 로고 */
+.admin-header-left {
+  padding-left: 50px;
+}
+
+.admin-header-logo {
+  width: 260px;
+  height: 130px;
+  border: none;
+}
+
+/* 중앙 제목 */
+.admin-header-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  white-space: nowrap;
+}
+
+/* 오른쪽 영역 */
+.admin-header-right {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+
+/* 사용자 페이지의 로그인 버튼 스타일 그대로 */
+.admin-logout-button {
+  padding: 8px 15px;
+  background-color: #ffffff;
+  color: #3D3D3D;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.admin-logout-button:hover {
+  background-color: #4E6C50;
+  color: white;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .admin-header-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 15px;
+  }
+
+  .admin-header-left {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .admin-header-logo {
+    width: 200px;
+    height: 100px;
+  }
+
+  .admin-header-title {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .admin-header-right {
+    width: 100%;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .admin-logout-button {
+    padding: 6px 12px;
+    font-size: 0.9em;
+  }
+}

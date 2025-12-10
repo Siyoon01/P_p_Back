@@ -1,0 +1,140 @@
+/* 전체 컨테이너 스타일 */
+.logincontainer {
+  width: 100%;
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 25px 40px;
+  background-color: #FDF8F5;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.logincontainer h3 {
+  font-size: 1.3rem;
+  color: #5D4037;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* 폼 */
+.logincontainer form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* 라벨 */
+.logincontainer label {
+  font-size: 1rem;
+  color: #5D4037;
+  margin-bottom: 8px;
+  font-weight: 550;
+  margin-top: 10px;
+}
+
+/* 입력창 */
+.logincontainer input {
+  padding: 14px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+.logincontainer input:focus {
+  outline: none;
+  border-color: #609966;
+}
+
+/* 버튼 오른쪽 정렬 */
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+/* 비밀번호 찾기 버튼 */
+.find-pwd-btn {
+  padding: 12px 24px;
+  background-color: #609966;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 550;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.find-pwd-btn:hover {
+  background-color: #4a7c4a;
+}
+
+/* 모달 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #FDF8F5;
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.modal-content h2 {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #5D4037;
+  margin-top: 0;
+  margin: 5px 0;
+  font-weight: 600;
+}
+
+.modal-content p {
+  text-align: left;
+  font-size: 1rem;
+  color: #5D4037;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* 모달 내부 폼 */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 로그인 페이지 이동 버튼 */
+.go-to-Userlogin {
+  width: fit-content;
+  padding: 12px 20px;
+  background-color: #609966;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 550;
+  cursor: pointer;
+  margin-top: 20px;
+  align-self: center;
+}
+
+.go-to-Userlogin:hover {
+  background-color: #4E6C50;
+}

@@ -1,0 +1,458 @@
+.recipe-detail-container {
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  width: 80%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* 섹션 간 간격 */
+}
+
+/* 레시피 기본 정보 섹션 - 초록색 테두리 박스 */
+.recipe-info-section {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  border: 3px solid #4CAF50; /* 초록색 테두리 */
+  border-radius: 40px;
+  padding: 30px;
+  box-sizing: border-box;
+  min-height: auto !important; /* 높이 제한 없음 */
+  overflow: visible !important; /* 잘림 방지 */
+  max-height: none !important; /* 높이 제한 없음 */
+}
+
+.recipe-image-container {
+  flex-shrink: 0;
+}
+
+.recipe-image-fixed {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.recipe-text-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 0; /* flex item이 내용에 따라 줄어들 수 있도록 */
+  overflow: visible !important; /* 내용이 잘리지 않도록 */
+  min-height: auto !important; /* 높이 제한 없음 */
+  max-height: none !important; /* 높이 제한 없음 */
+  height: auto !important; /* 높이 자동 */
+}
+
+.recipe-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.recipe-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  white-space: normal !important; /* 강제로 줄바꿈 허용 */
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  overflow: visible !important; /* 잘림 방지 */
+  text-overflow: clip !important; /* ellipsis 대신 clip 사용 */
+  max-width: 100% !important;
+  min-height: auto !important; /* 높이 제한 없음 */
+  height: auto !important; /* 높이 자동 */
+  max-height: none !important; /* 높이 제한 없음 */
+  display: block !important; /* 블록 요소로 */
+  /* ellipsis 완전히 제거 */
+  -webkit-line-clamp: none !important;
+  line-clamp: none !important;
+}
+
+.recipe-ingredients,
+.recipe-tools {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.4;
+  white-space: normal !important; /* 줄바꿈 허용 */
+  overflow: visible !important; /* 잘림 방지 */
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  min-height: auto !important; /* 높이 제한 없음 */
+  max-height: none !important; /* 높이 제한 없음 */
+  height: auto !important; /* 높이 자동 */
+  text-overflow: clip !important; /* ellipsis 제거 */
+  /* ellipsis 완전히 제거 */
+  -webkit-line-clamp: none !important;
+  line-clamp: none !important;
+}
+
+.recipe-ingredients strong,
+.recipe-tools strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.ingredients-list {
+  white-space: normal !important;
+  overflow: visible !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  list-style-type: disc !important;
+  list-style-position: outside !important;
+  margin: 8px 0 0 0 !important;
+  padding-left: 20px !important;
+  max-height: none !important; /* 높이 제한 없음 */
+  height: auto !important; /* 높이 자동 */
+  text-overflow: clip !important; /* ellipsis 제거 */
+  display: grid !important; /* 그리드 레이아웃 사용 */
+  grid-template-columns: repeat(2, 1fr) !important; /* 2열로 표시 */
+  gap: 4px 20px !important; /* 행 간격 4px, 열 간격 20px */
+  /* ellipsis 완전히 제거 */
+  -webkit-line-clamp: none !important;
+  line-clamp: none !important;
+}
+
+.ingredients-list li {
+  white-space: normal !important;
+  overflow: visible !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  margin-bottom: 8px !important;
+  max-height: none !important; /* 높이 제한 없음 */
+  height: auto !important; /* 높이 자동 */
+  text-overflow: clip !important; /* ellipsis 제거 */
+  display: list-item !important;
+  list-style-position: outside !important;
+  /* ellipsis 완전히 제거 */
+  -webkit-line-clamp: none !important;
+  line-clamp: none !important;
+}
+
+/* 구분선 제거 (섹션 간 간격은 gap으로 처리) */
+.section-divider {
+  display: none;
+}
+
+/* 섹션 제목 */
+.section-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+  text-align: center;
+}
+
+/* 나의 냉장고 수량 조절하기 섹션 - 진한 초록색 테두리 박스 */
+.fridge-quantity-section {
+  border: 3px solid #4E6C50; /* 진한 초록색 테두리 */
+  border-radius: 40px;
+  padding: 30px;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0;
+}
+
+.quantity-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.ingredient-display {
+  width: 200px;
+  flex: none;
+  padding: 8px 12px;
+  background-color: #f8f8f8;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.ingredient-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.ingredient-select {
+  width: 200px;
+  flex: none;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  height: 36px;
+  box-sizing: border-box;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.ingredient-select:hover {
+  border-color: #ff6b4a;
+}
+
+.ingredient-select:focus {
+  outline: none;
+  border-color: #ff6b4a;
+  box-shadow: 0 0 0 2px rgba(255, 107, 74, 0.1);
+}
+
+/* 수량 입력 그룹 */
+.quantity-input-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 180px;
+}
+
+.quantity-number-input {
+  width: 70px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  transition: border-color 0.2s ease;
+  text-align: center;
+  height: 36px;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+.quantity-number-input:hover {
+  border-color: #ff6b4a;
+}
+
+.quantity-number-input:focus {
+  outline: none;
+  border-color: #ff6b4a;
+  box-shadow: 0 0 0 2px rgba(255, 107, 74, 0.1);
+}
+
+.unit-select {
+  width: 80px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  height: 36px;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+.unit-select:hover {
+  border-color: #ff6b4a;
+}
+
+.unit-select:focus {
+  outline: none;
+  border-color: #ff6b4a;
+  box-shadow: 0 0 0 2px rgba(255, 107, 74, 0.1);
+}
+
+.placeholder-quantity-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 180px;
+  padding: 8px 12px;
+  height: 36px;
+  box-sizing: border-box;
+  margin-bottom: 14px;
+}
+
+.placeholder-text {
+  font-size: 14px;
+  color: #999;
+  text-align: right;
+}
+
+.save-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.save-button {
+  padding: 10px 20px;
+  background-color: #FFC36D; /* 노란색 배경 */
+  color: #000000; /* 검정색 글씨 */
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+  background-color: #f5b655; /* 호버 시 약간 어두운 노란색 */
+}
+
+/* 조리 순서 섹션 - 노란색 테두리 박스 */
+.cooking-steps-section {
+  border: 3px solid #FFC36D; /* 노란색 테두리 */
+  border-radius: 40px;
+  padding: 30px;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0;
+}
+
+/* 각 조리 순서를 개별 박스로 */
+.cooking-step {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+  background-color: #FDF8F5; /* 연한 베이지 배경 */
+  padding: 20px;
+  border-radius: 15px;
+  border: none; /* 기존 구분선 제거 */
+}
+
+.cooking-step:last-child {
+  margin-bottom: 0;
+}
+
+.step-image {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.step-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step-order {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ff6b4a;
+  margin: 0;
+}
+
+.step-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.step-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  font-size: 18px;
+  color: #666;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+  .main-content {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .recipe-detail-container {
+    padding: 15px;
+  }
+
+  .main-content {
+    width: 95%;
+  }
+
+  .recipe-info-section {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .recipe-image-fixed {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .recipe-name {
+    font-size: 24px;
+  }
+
+  .fridge-quantity-section {
+    padding: 20px;
+  }
+
+  .quantity-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ingredient-select {
+    width: 100%;
+  }
+
+  .quantity-input-group {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .placeholder-quantity-group {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cooking-steps-section {
+    padding: 20px;
+  }
+
+  .cooking-step {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .step-image {
+    width: 100%;
+    height: 200px;
+  }
+}

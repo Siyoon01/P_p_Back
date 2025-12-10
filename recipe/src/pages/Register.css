@@ -1,0 +1,150 @@
+.registercontainer {
+  width: 75%;
+  margin: 30px auto;
+  background-color: #ffffff;
+  border: 3px solid #609966;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.registercontainer h1 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0 5px;
+  font-size: 1.3rem;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  color: #333333;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* 성별 */
+.gender-group {
+
+  border: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.gender-group legend {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #5D4037;
+  font-weight: 450;
+}
+
+.gender-options {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 실제 라디오 버튼 */
+.gender-input {
+  display: none;
+}
+
+/* 라벨 스타일 */
+.gender-label {
+  flex: 1;
+  padding: 8px 30px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #333;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  transition: all 0.3s ease;
+  border-left: 1.5px solid #609966;
+  border-top: 1.5px solid #609966;
+  border-bottom: 1.5px solid #609966;
+}
+
+/* 라벨 사이 경계선 */
+.gender-label + .gender-input + .gender-label {
+  border-right: 1.5px solid #609966;;
+}
+
+/* 선택된 라디오 버튼 라벨 스타일 */
+.gender-input:checked + .gender-label {
+  background-color: #609966;
+  color: white;
+}
+
+.gender-label:hover {
+  background-color: #609966;
+  color: #ffffff;
+}
+
+.gender-input:checked + .gender-label:hover {
+  background-color: #609966;
+  color: #ffffff;
+}
+
+.registerbutton {
+  background-color: #609966;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 550;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+  text-decoration: none;
+  text-align: center;
+}
+
+.registerbutton:hover {
+  background-color: #4E6C50;
+}
+
+@media (max-width: 768px) {
+  .registercontainer {
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: none;
+  }
+
+  .registercontainer h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  label {
+    font-size: 1.1rem;
+    margin: 8px 0 4px;
+  }
+
+  input {
+    padding: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  .registerbutton {
+    padding: 10px;
+    font-size: 0.9rem;
+    margin-top: 8px;
+  }
+}

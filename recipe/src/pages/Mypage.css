@@ -1,0 +1,295 @@
+/* 전체 컨테이너 */
+.MypageContainer {
+  width: 75%;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: #333;
+  background-color: #fff;
+}
+
+/* 섹션 */
+.MypageContainer section {
+  margin-bottom: 10px;
+}
+
+/* 제목 */
+.MypageContainer h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #5D4037;
+}
+
+/* 폼 */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 라벨 */
+label {
+  font-size: 20px;
+  margin: 12px 0 15px;
+  color: #5D4037;
+  font-weight: 450;
+}
+
+/* 입력 필드 */
+input {
+  padding: 10px 14px;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  font-size: 20px;
+  color: #828282;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4E6C50;
+}
+
+/* 성별 */
+.gender-group {
+
+  border: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.gender-group legend {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #5D4037;
+  font-weight: 450;
+}
+
+.gender-options {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 실제 라디오 버튼 */
+.gender-input {
+  display: none;
+}
+
+/* 라벨 스타일 */
+.gender-label {
+  flex: 1;
+  padding: 8px 30px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #333;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  transition: all 0.3s ease;
+  border-left: 1.5px solid #609966;
+  border-top: 1.5px solid #609966;
+  border-bottom: 1.5px solid #609966;
+}
+
+/* 라벨 사이 경계선 */
+.gender-label + .gender-input + .gender-label {
+  border-right: 1.5px solid #609966;;
+}
+
+/* 선택된 라디오 버튼 라벨 스타일 */
+.gender-input:checked + .gender-label {
+  background-color: #609966;
+  color: white;
+}
+
+.gender-label:hover {
+  background-color: #609966;
+  color: #ffffff;
+}
+
+.gender-input:checked + .gender-label:hover {
+  background-color: #609966;
+  color: #ffffff;
+}
+
+/* 수정 완료 버튼 스타일 */
+.mypage-submit-button {
+  background-color: #609966;
+  width: fit-content;
+  color: white;
+  padding: 10px;
+  border: none;
+  font-weight: 500;
+  border-radius: 10px;
+  font-size: 1.0rem;
+  margin: 15px 0 0 auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mypage-submit-button:hover {
+  background-color: #4E6C50;
+}
+
+/* 회원 탈퇴 버튼 스타일 */
+.withdraw-btn {
+  display: block;
+  width: fit-content;
+  background-color: #ffffff;
+  color: #8a8a8a;
+  border: 1px solid #828282;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.0rem;
+  font-weight: 550;
+  margin-left: auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.withdraw-btn:hover {
+  color: #333;
+}
+
+/* 알레르기 버튼 그룹 */
+.allergies-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  gap: 12px;
+  margin-bottom: 15px; /* 조리도구와의 간격 */
+}
+
+/* 알레르기 버튼 */
+.allergy-button {
+  background-color: #ffffff;
+  border: 1.5px solid #609966;
+  color: #5D4037;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 선택된 알레르기 버튼 */
+.allergy-button.selected {
+  background-color: #609966;
+  color: white;
+  border-color: #609966;
+}
+
+.allergy-button:hover {
+  background-color: #609966;
+  border-color: #609966;
+}
+
+/* 조리도구 버튼 그룹 */
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  gap: 12px;
+}
+
+/* 각 조리도구 버튼 */
+.tool-button {
+  background-color: #ffffff;
+  color: #5D4037;
+  border: 1.5px solid #FFC36D;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 선택된 조리도구 버튼 */
+.tool-button.selected {
+  background-color: #FFC36D;
+  color: white;
+  border-color: #FFC36D;
+}
+
+.tool-button:hover {
+  background-color: #FFC36D;
+  border-color: #FFC36D;
+}
+
+/* 모달 오버레이 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* 모달 본체 */
+.withdraw-modal-content {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border: 3px solid #609966;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 550px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 모달 제목 */
+.modal-content h3 {
+  margin:0 0 20px;
+  font-weight: 550;
+  font-size: 1.2rem;
+  color: #333333;
+}
+
+/* 모달 입력 필드 */
+.modal-content input {
+  width: 100%;
+  padding: 15px 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 25px;
+  box-sizing: border-box;
+}
+
+.withdraw-buttons {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+}
+
+/* 회원 탈퇴 & 돌아가기 버튼 */
+.confirm-btn, .turnback-btn {
+  background-color: #4E6C50;
+  color: #fff;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: fit-content;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  font-weight: normal;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #609966;
+}

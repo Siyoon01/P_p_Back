@@ -1,0 +1,424 @@
+/* ───────────────────────────────────────────── */
+/* 메인 페이지 */
+/* ───────────────────────────────────────────── */
+
+.admin-user-page {
+  padding: 32px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.page-title {
+  font-size: 28px;
+  color: #2d5a2f;
+  margin: 0 0 32px 0;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.user-table-container {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fdf9 100%);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 16px rgba(96, 153, 102, 0.12);
+  border: 1px solid #e8f5e9;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 24px;
+}
+
+.user-table thead {
+  background: linear-gradient(135deg, #609966 0%, #4d7d52 100%);
+}
+
+.user-table thead tr th:first-child {
+  border-radius: 12px 0 0 0;
+}
+
+.user-table thead tr th:last-child {
+  border-radius: 0 12px 0 0;
+}
+
+.user-table th {
+  padding: 18px;
+  text-align: left;
+  font-weight: 600;
+  color: #ffffff;
+  border: none;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.user-table tbody tr {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #ffffff;
+}
+
+.user-table tbody tr:hover {
+  background-color: #f0f8f1;
+  transform: scale(1.01);
+  box-shadow: 0 2px 8px rgba(96, 153, 102, 0.15);
+}
+
+.user-table tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 12px;
+}
+
+.user-table tbody tr:last-child td:last-child {
+  border-radius: 0 0 12px 0;
+}
+
+.user-table td {
+  padding: 18px;
+  color: #333333;
+  font-size: 14px;
+}
+
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+  letter-spacing: 0.3px;
+}
+
+.status-badge.active {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  color: #155724;
+  box-shadow: 0 2px 4px rgba(21, 87, 36, 0.1);
+}
+
+.status-badge.inactive {
+  background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+  color: #721c24;
+  box-shadow: 0 2px 4px rgba(114, 28, 36, 0.1);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fdf9 100%);
+  border: 2px solid #609966;
+  border-radius: 10px;
+  color: #609966;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #609966 0%, #4d7d52 100%);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(96, 153, 102, 0.3);
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  border-color: #cccccc;
+  color: #999999;
+}
+
+.page-info {
+  font-weight: 700;
+  color: #2d5a2f;
+  font-size: 15px;
+  padding: 8px 16px;
+  background-color: #f0f8f1;
+  border-radius: 8px;
+}
+
+/* ───────────────────────────────────────────── */
+/* 모달 */
+/* ───────────────────────────────────────────── */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fdf9 100%);
+  border-radius: 20px;
+  padding: 48px;
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(96, 153, 102, 0.2);
+  border: 1px solid #e8f5e9;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-section {
+  margin-bottom: 48px;
+}
+
+/* 헤더 (섹션 제목 + 라인) */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.admin-section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2d5a2f;
+  margin: 0;
+  white-space: nowrap;
+  letter-spacing: -0.3px;
+}
+
+.admin-section-line {
+  width: 4px;
+  height: 2.6em;
+  background: linear-gradient(to bottom, #609966, rgba(96, 153, 102, 0.3));
+  box-shadow: 2px 0 6px rgba(96, 153, 102, 0.3);
+  border-radius: 2px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d5a2f;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e8f5e9;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'Noto Sans KR', sans-serif;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #609966;
+  box-shadow: 0 0 0 3px rgba(96, 153, 102, 0.1);
+}
+
+.form-group small {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #888888;
+}
+
+/* ───────────────────────────────────────────── */
+/* 성별 버튼 */
+/* ───────────────────────────────────────────── */
+
+.admin-gender-buttons {
+  display: flex;
+  width: 100%;
+  max-width: 320px;
+  height: 52px;
+  border: 2px solid #609966;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff;
+  margin: 0;
+  box-shadow: 0 2px 8px rgba(96, 153, 102, 0.1);
+}
+
+.modal-content .admin-gender-button {
+  flex: 1;
+  border: none !important;
+  background-color: #ffffff !important;
+  color: #555555 !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  font-family: 'Noto Sans KR', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  width: auto !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+
+.admin-gender-button:first-child::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 60%;
+  background-color: #e8f5e9;
+}
+
+.modal-content .admin-gender-button.selected {
+  background: linear-gradient(135deg, #609966 0%, #4d7d52 100%) !important;
+  color: #ffffff !important;
+}
+
+.admin-gender-button.selected:first-child::after {
+  background-color: transparent;
+}
+
+.modal-content .admin-gender-button:hover:not(.selected) {
+  background-color: #f0f8f1 !important;
+}
+
+/* ───────────────────────────────────────────── */
+/* 태그 버튼 */
+/* ───────────────────────────────────────────── */
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tag-btn {
+  padding: 10px 18px;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Noto Sans KR', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tag-btn.allergy {
+  border: 2px solid #609966;
+  background-color: #ffffff;
+  color: #609966;
+}
+
+.tag-btn.allergy.selected {
+  background: linear-gradient(135deg, #609966 0%, #4d7d52 100%);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(96, 153, 102, 0.3);
+  transform: translateY(-2px);
+}
+
+.tag-btn.allergy:hover:not(.selected) {
+  background-color: #f0f8f1;
+  transform: translateY(-1px);
+}
+
+.tag-btn.cooking-tool {
+  border: 2px solid #FFC36D;
+  background-color: #ffffff;
+  color: #FFC36D;
+}
+
+.tag-btn.cooking-tool.selected {
+  background: linear-gradient(135deg, #FFC36D 0%, #f5b655 100%);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(255, 195, 109, 0.3);
+  transform: translateY(-2px);
+}
+
+.tag-btn.cooking-tool:hover:not(.selected) {
+  background-color: #fff9f0;
+  transform: translateY(-1px);
+}
+
+/* ───────────────────────────────────────────── */
+/* 모달 액션 버튼 */
+/* ───────────────────────────────────────────── */
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.btn-delete {
+  padding: 14px 28px;
+  border: 2px solid #609966;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #609966;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Noto Sans KR', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-delete:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(96, 153, 102, 0.2);
+}
+
+.btn-update {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #609966 0%, #4d7d52 100%);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Noto Sans KR', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(96, 153, 102, 0.3);
+}
+
+.btn-update:hover {
+  background: linear-gradient(135deg, #4d7d52 0%, #3d6342 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(96, 153, 102, 0.4);
+}

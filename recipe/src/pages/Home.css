@@ -1,0 +1,153 @@
+/* 전체 메인 레이아웃 */
+.Maincontent {
+  padding: 20px;
+  width: 75%;
+  margin: 0 auto;
+  color: #333;
+}
+
+/* 소개 섹션 */
+.Introduce {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.intro {
+  flex: 2;
+  font-size: 23px;
+  line-height: 1.8;
+  font-weight: 550;
+  text-align: left;
+  padding: 0;
+}
+
+.intro p {
+  margin: 0;
+  word-break: keep-all;
+  white-space: normal;
+  letter-spacing: -0.3px;
+}
+
+.imagecontent {
+  flex: 1;
+}
+
+.imagecontent img {
+  max-width: 260px;
+  height: auto;
+  padding-left: 5px;
+}
+
+/* 주요 기능 */
+.featuretitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.feature {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.feature-items-wrapper {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feature-item {
+  background: #FDF8F5;
+  border: 2px solid #FDF8F5;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  width: 210px;
+  transition: transform 0.2s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+.feature-item img {
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+}
+
+.feature-item h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #333333;
+  font-weight: 500;
+}
+
+.feature-item p {
+  font-size: 1.0rem;
+  color: #333333;
+  line-height: 1.4;
+  padding: 0 11px;
+}
+
+/* 단계별 사용자 흐름 */
+.user-flow {
+  text-align: left;
+  margin-bottom: 70px;
+}
+
+.user-flow h3 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.step-circle {
+  border: 4px solid #609966;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 5px;
+  text-align: center;
+}
+
+.step-arrow {
+  margin: 5px;
+  font-size: 5.0rem;
+  color: #4E6C50;
+}
+
+/* 시작 버튼 */
+.start-button {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 28px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  width: fit-content;
+}
+
+.start-button:hover {
+  background-color: #4E6C50;
+}

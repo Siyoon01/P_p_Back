@@ -1,0 +1,33 @@
+.admin-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.admin-body {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 40px 40px 40px 20px;
+  background-color: #ffffff;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Content 박스 */
+.admin-content-box {
+  flex: 1;
+  padding: 20px 20px;
+  background: #fff;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  min-height: 600px;
+}

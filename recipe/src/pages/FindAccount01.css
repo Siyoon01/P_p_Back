@@ -1,0 +1,165 @@
+/* 전체 컨테이너 */
+.logincontainer {
+  width: 100%;
+  max-width: 650px;
+  margin: 80px auto;
+  padding: 25px 40px;
+  background-color: #FDF8F5;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* 제목 */
+.logincontainer h3 {
+  font-size: 1.3rem;
+  color: #5D4037;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* 폼 */
+.logincontainer form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* 라벨 */
+.logincontainer label {
+  font-size: 1rem;
+  color: #5D4037;
+  margin-bottom: 8px;
+  font-weight: 550;
+}
+
+/* 입력창 */
+.logincontainer input {
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.logincontainer input:focus {
+  outline: none;
+  border-color: #609966;
+  box-shadow: 0 0 0 2px rgba(96, 153, 102, 0.2);
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+/* 아이디 찾기 */
+.find-id {
+  width: fit-content;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #609966;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 550;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.find-id:hover {
+  background-color: #4E6C50;
+}
+
+/* 모달 배경 오버레이 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+}
+
+/* 모달 컨텐츠 박스 */
+.find-modal-content {
+  background-color: #FDF8F5;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+  animation: slideUp 0.3s ease-out;
+}
+
+/* 모달 나타나는 애니메이션 */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.find-modal-content h2 {
+  font-size: 1.25rem;
+  color: #5D4037;
+  margin: 5px 0;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* 모달 메시지 텍스트 */
+.find-modal-content h3 {
+  font-size: 1.1rem;
+  color: #5D4037;
+  margin: 5px 0;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* 첫 번째 메시지 위쪽 여백 */
+.find-modal-content h3:first-of-type {
+    margin-top: 15px;
+}
+
+/* 두 번째 메시지 아래쪽 여백 */
+.find-modal-content h3:last-of-type {
+    margin-bottom: 35px;
+}
+
+/* 로그인 페이지 이동 버튼 */
+.move-to-Userlogin {
+  width: fit-content;
+  padding: 12px 20px;
+  background-color: #609966;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 550;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.move-to-Userlogin:hover {
+  background-color: #4E6C50;
+}
+
+.move-to-Userlogin:active {
+  transform: scale(0.98);
+}

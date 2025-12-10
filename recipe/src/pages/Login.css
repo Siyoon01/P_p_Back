@@ -1,0 +1,85 @@
+.logincontainer {
+  max-width: 600px;
+  margin: 60px auto;
+  background-color: #FDF8F5;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+label {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #5D4037;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  color: #333333;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.button-group {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.login-button {
+  background-color: #609966;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.login-button:hover {
+  background-color: #4E6C50;
+}
+
+.find-group {
+  gap: 20;
+  display: flex;
+  margin-left: 270px;
+}
+
+.find {
+  background-color: none;
+  color: #333333;
+  padding: 12px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+  text-decoration: none;
+  text-align: center;
+  width: max-content;
+  white-space: nowrap;
+}
+
+.find:hover {
+  text-decoration: underline;
+}
